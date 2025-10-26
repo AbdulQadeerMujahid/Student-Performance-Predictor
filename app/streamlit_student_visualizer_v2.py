@@ -22,7 +22,7 @@ to predict whether a student will **Pass or Fail**.
 """)
 
 # ------------------ LOAD DATA ------------------
-file_path = "student_performance_prediction.csv"
+file_path = "dataset/student_performance_prediction.csv"
 
 if os.path.exists(file_path):
     df = pd.read_csv(file_path)
@@ -91,7 +91,7 @@ ax.pie(
     labels=pf_counts.index,
     autopct="%1.1f%%",
     startangle=90,
-    colors=["lightgreen", "tomato"]
+    colors=["tomato", "lightgreen"]
 )
 ax.axis("equal")
 st.pyplot(fig)
